@@ -8,6 +8,7 @@ from gpt4allj import Model
 st.set_page_config(layout='wide')
 from streamlit_option_menu import option_menu
 
+
 model = Model('models/ggml-gpt4all-j.bin')
 
 def show_messages(text):
@@ -17,22 +18,23 @@ def show_messages(text):
     text.text_area("Messages", value=str("\n".join(messages_str)), height=400)
 
 with st.sidebar:
-    choose = option_menu("Streamlit GPT", [ "Play Ground","About","Contact"],
+    choose = option_menu("TeslaGPT", [ "Play Ground","About","Contact"],
                          icons=['kanban', 'book', 'person lines fill'],
                          menu_icon="cast", default_index=0,
                          styles={
                              "container": {"padding": "5!important", "background-color": "#262730"},
-                             "icon": {"color": "#02ab21", "font-size": "25px"},
+                             "icon": {"color": "white", "font-size": "25px"},
                              "nav-link": {"font-size": "16px", "text-align": "left", "margin": "0px",
                                           "--hover-color": "#56755c"},
                              "nav-link-selected": {"background-color": "#2f5335"},
                          }
                          )
+    
 if choose == "About":
     st.markdown(""" <style> .font {
         font-size:30px ; font-family: 'Cooper Black'; color: #02ab21;} 
         </style> """, unsafe_allow_html=True)
-    st.markdown('<p class="font">About the Streamlit GPT</p>', unsafe_allow_html=True)
+    st.markdown('<p class="font">About the TeslaGPT</p>', unsafe_allow_html=True)
 
     st.write("This application uses GPT4ALL-J to generate answers for prompted questions.")
 
@@ -49,7 +51,7 @@ elif choose == "Play Ground":
     st.markdown(""" <style> .font {
                         font-size:30px ; font-family: 'Cooper Black'; color: #02ab21;} 
                         </style> """, unsafe_allow_html=True)
-    st.markdown('<p class="font">GPT4 Play Ground :</p>', unsafe_allow_html=True)
+    st.markdown('<p class="font">TeslaGPT Play Ground :</p>', unsafe_allow_html=True)
 
     text = st.empty()
     show_messages(text)
@@ -82,3 +84,4 @@ elif choose == "Contact":
     st.write("Email address: oyeniyiemperor@gmail.com")
     st.write("GitHub link: https://github.com/Taoheed-O/")
     st.write("LinkedIn profile: https://www.linkedin.com/in/taoheed-oyeniyi/")
+    

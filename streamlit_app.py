@@ -49,7 +49,7 @@ elif choose == "Play Ground":
         st.session_state["messages"] = BASE_PROMPT
 
     st.markdown(""" <style> .font {
-                        font-size:30px ; font-family: 'Cooper Black'; color: #02ab21;} 
+                        font-size:30px ; font-family: 'Cooper Black'; color: black;} 
                         </style> """, unsafe_allow_html=True)
     st.markdown('<p class="font">TeslaGPT Play Ground :</p>', unsafe_allow_html=True)
 

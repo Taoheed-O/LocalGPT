@@ -1,0 +1,5 @@
+streamlit
+pandas
+numpy
+gpt4allj
+streamlit_option_menu

@@ -56,7 +56,7 @@ elif choose == "Play Ground":
     text = st.empty()
     show_messages(text)
 
-    prompt = st.text_input("Prompt:", value="Enter your message here...")
+    prompt = st.text_input("Prompt:", placeholder="Enter your message here...")
 
     col1, col2 = st.columns(2)
     with col1:

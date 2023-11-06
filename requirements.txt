@@ -1,5 +1,5 @@
 streamlit
 pandas
 numpy
-gpt4allj
+gpt4all-j
 streamlit_option_menu

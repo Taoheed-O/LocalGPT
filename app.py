@@ -17,6 +17,7 @@ def show_messages(text):
     ]
     text.text_area("Messages", value=str("\n".join(messages_str)), height=400)
 
+
 with st.sidebar:
     choose = option_menu("TeslaGPT", [ "Play Ground","About","Contact"],
                          icons=['kanban', 'book', 'person lines fill'],
@@ -83,5 +84,4 @@ elif choose == "Contact":
 
     st.write("Email address: oyeniyiemperor@gmail.com")
     st.write("GitHub link: https://github.com/Taoheed-O/")
-    st.write("LinkedIn profile: https://www.linkedin.com/in/taoheed-oyeniyi/")
-    
+    st.write("LinkedIn profile: https://www.linkedin.com/in/taoheed-oyeniyi/") 

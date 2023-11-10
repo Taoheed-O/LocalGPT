@@ -11,6 +11,7 @@ from streamlit_option_menu import option_menu
 
 model = Model('models/ggml-gpt4all-j.bin')
 
+
 def show_messages(text):
     messages_str = [
         f"{_['role']}: {_['content']}" for _ in st.session_state["messages"][1:]
@@ -31,6 +32,7 @@ with st.sidebar:
                          }
                          )
     
+
 if choose == "About":
     st.markdown(""" <style> .font {
         font-size:30px ; font-family: 'Cooper Black'; color: #02ab21;} 
@@ -84,4 +86,4 @@ elif choose == "Contact":
 
     st.write("Email address: oyeniyiemperor@gmail.com")
     st.write("GitHub link: https://github.com/Taoheed-O/")
-    st.write("LinkedIn profile: https://www.linkedin.com/in/taoheed-oyeniyi/") 
+    st.write("LinkedIn profile: https://www.linkedin.com/in/taoheed-oyeniyi/")

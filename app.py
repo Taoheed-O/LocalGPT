@@ -33,6 +33,7 @@ with st.sidebar:
                          )
     
 
+
 if choose == "About":
     st.markdown(""" <style> .font {
         font-size:30px ; font-family: 'Cooper Black'; color: #02ab21;} 
@@ -45,6 +46,7 @@ elif choose == "Play Ground":
     st.markdown(""" <style> .font {
                 font-size:30px ; font-family: 'Cooper Black'; color: #02ab21;} 
                 </style> """, unsafe_allow_html=True)
+
 
     BASE_PROMPT = [{"role": "AI", "content": "You are a helpful assistant."}]
 
@@ -62,6 +64,7 @@ elif choose == "Play Ground":
     prompt = st.text_input("Prompt:", placeholder="Enter your message here...")
 
     col1, col2 = st.columns(2)
+
     with col1:
         if st.button("Send"):
             with st.spinner("Generating response..."):
@@ -72,6 +75,7 @@ elif choose == "Play Ground":
                     {"role": "AI", "content": message_response}
                 ]
                 show_messages(text)
+                
     with col2:
         if st.button("Clear"):
             st.session_state["messages"] = BASE_PROMPT

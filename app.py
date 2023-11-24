@@ -1,7 +1,6 @@
-# streamlit version 
-
 # shebang
 #!/usr/bin/env python
+
 
 import streamlit as st
 from gpt4allj import Model
@@ -75,7 +74,7 @@ elif choose == "Play Ground":
                     {"role": "AI", "content": message_response}
                 ]
                 show_messages(text)
-                
+
     with col2:
         if st.button("Clear"):
             st.session_state["messages"] = BASE_PROMPT
